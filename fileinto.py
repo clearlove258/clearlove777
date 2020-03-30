@@ -10,3 +10,35 @@ username=Entry(top)
 password=Entry(top)
 enter1=Button(top,text='Log in',command=lambda:enter())
 out=Button(top,text='退出',command=top.destroy)
+def increase():
+    global inc
+    inc=Tk()
+    inc.title('提示')
+    c=Label(inc,text='请输入学生姓名')
+    global c1
+    c1=Entry(inc)
+    cb1=Button(inc,text='OK',command=lambda:go())
+    cb2=Button(inc,text='Cancel',command=inc.destroy)
+    c.pack()
+    c1.pack()
+    cb1.pack()
+    cb2.pack()
+    inc.mainloop()
+def go():
+    sm=c1.get()
+    if sm in sl:
+        tkinter.messagebox.showinfo('错误','该学生已存在')
+    else:
+        global inp
+        inp=Tk()
+        inp.title('提示')
+        d1=Label(inp,text='请输入学生成绩')
+        global d2
+        d2=Entry(inp)
+        d3=Button(inp,text='OK',command=lambda:go2())
+        d4=Button(inp,text='Cancel',command=inp.destroy)
+        d1.pack()
+        d2.pack()
+        d3.pack()
+        d4.pack()
+        inp.mainloop()
