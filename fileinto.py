@@ -32,15 +32,7 @@ int saddle(int m, int n, int a[][3], int ***q)
 
 		}
 
-		if (k==m){
-
-			res[s]=(int*)malloc(sizeof(int)*2);
-
-			res[s][0]=i;
-
-			res[s][1]=min_index;
-
-			s++;
+		
 
 		}
 
